@@ -9,10 +9,8 @@ public class BubbleSort {
     public static int[] sort(int[] sourceArray) {
         for (int i = 0; i < sourceArray.length - 1; i++) {
             for (int j = 0; j < sourceArray.length - i - 1; j++) {
-                if (sourceArray[j] > sourceArray[j + 1]) {
-                    sourceArray[j] = sourceArray[j] ^ sourceArray[j + 1];
-                    sourceArray[j + 1] = sourceArray[j] ^ sourceArray[j + 1];
-                    sourceArray[j] = sourceArray[j] ^ sourceArray[j + 1];
+                if (j < sourceArray.length - 1 && sourceArray[j] > sourceArray[j + 1]) {
+                    SortUtils.swapIntArray(sourceArray,j,j+1);
                 }
             }
         }
