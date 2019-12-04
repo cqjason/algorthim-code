@@ -10,9 +10,7 @@ public class InsertSort {
         for (int i = 1; i < array.length; i++) {
             for (int j = 0; j < i; j++) {
                 if (array[i] < array[j]) {
-                    array[i] = array[i] ^ array[j];
-                    array[j] = array[i] ^ array[j];
-                    array[i] = array[i] ^ array[j];
+                    SortUtils.swapIntArray(array, i, j);
                     break;
                 }
             }
