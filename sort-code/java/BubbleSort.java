@@ -7,9 +7,11 @@ import java.util.Arrays;
  */
 public class BubbleSort {
     public static int[] sort(int[] sourceArray) {
-        for (int i = 0; i < sourceArray.length - 1; i++) {
-            for (int j = 0; j < sourceArray.length - i - 1; j++) {
-                if (j < sourceArray.length - 1 && sourceArray[j] > sourceArray[j + 1]) {
+        //executions
+        for (int i = 1; i < sourceArray.length; i++) {
+            //At every execution，'j' is startIndex,'len  -i' is endIndex
+            for (int j = 0; j < sourceArray.length - i; j++) {
+                if (sourceArray[j] > sourceArray[j + 1]) {
                     SortUtils.swapIntArray(sourceArray,j,j+1);
                 }
             }
@@ -20,7 +22,7 @@ public class BubbleSort {
     public static void main(String[] args) {
         int[] sourceArray = new int[]{5, 1, 7, 2, 8, 4, 6};
         System.out.println("before sorted:" + Arrays.toString(sourceArray));
-        int[] soertedArray = sort(sourceArray);
-        System.out.println("after sorted:" + Arrays.toString(soertedArray));
+        int[] sortedArray = sort(sourceArray);
+        System.out.println("after sorted:" + Arrays.toString(sortedArray));
     }
 }

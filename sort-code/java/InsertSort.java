@@ -7,12 +7,11 @@ import java.util.Arrays;
  */
 public class InsertSort {
     public static int[] sort(int[] array) {
+        //executions
         for (int i = 1; i < array.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (array[i] < array[j]) {
-                    SortUtils.swapIntArray(array, i, j);
-                    break;
-                }
+            //At every execution，'j' is startIndex
+            for (int j = i; j > 0 && array[j] < array[j - 1]; j--) {
+                SortUtils.swapIntArray(array, j, j - 1);
             }
         }
         return array;
@@ -21,7 +20,7 @@ public class InsertSort {
     public static void main(String[] args) {
         int[] sourceArray = new int[]{5, 1, 7, 3, 9, 4, 6};
         System.out.println("before sorted:" + Arrays.toString(sourceArray));
-        int[] soertedArray = sort(sourceArray);
-        System.out.println("after sorted:" + Arrays.toString(soertedArray));
+        int[] sortedArray = sort(sourceArray);
+        System.out.println("after sorted:" + Arrays.toString(sortedArray));
     }
 }
