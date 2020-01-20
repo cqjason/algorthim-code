@@ -22,7 +22,7 @@ public class MergeSort {
         mergeSortRecursion(dest, src, mid + 1, high);
 
         //If list is already sorted, just copy from src to dest
-        if (src[mid - 1] < src[mid]) {
+        if (src[mid] < src[mid + 1]) {
             System.arraycopy(src, low, dest, low, high - low + 1);
             return;
         }
