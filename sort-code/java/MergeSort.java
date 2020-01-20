@@ -24,6 +24,7 @@ public class MergeSort {
         //If list is already sorted, just copy from src to dest
         if (src[mid - 1] < src[mid]) {
             System.arraycopy(src, low, dest, low, high - low + 1);
+            return;
         }
 
         for (int i = low, lowRef = low, highRef = mid + 1; i <= high; i++) {
