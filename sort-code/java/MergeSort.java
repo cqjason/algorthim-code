@@ -17,6 +17,7 @@ public class MergeSort {
             return;
         }
 
+        // Low + high always is positive
         int mid = (low + high) >>> 1;
         mergeSortRecursion(dest, src, low, mid);
         mergeSortRecursion(dest, src, mid + 1, high);
@@ -28,7 +29,8 @@ public class MergeSort {
         }
 
         for (int i = low, lowRef = low, highRef = mid + 1; i <= high; i++) {
-            if (lowRef > mid || highRef <= high && src[highRef] < src[lowRef]) {
+            // ”lowRef > mid“ ： As lowArray is token wholly, just take highArray
+            if (lowRef > mid || (highRef <= high && src[highRef] < src[lowRef]) ) {
                 dest[i] = src[highRef++];
             } else {
                 dest[i] = src[lowRef++];

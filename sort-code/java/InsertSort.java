@@ -9,7 +9,7 @@ public class InsertSort {
     public static int[] sort(int[] array) {
         //executions
         for (int i = 1; i < array.length; i++) {
-            //At every execution，'j' is startIndex
+            //At every execution,'j' is startIndex
             for (int j = i; j > 0 && array[j] < array[j - 1]; j--) {
                 SortUtils.swapIntArray(array, j, j - 1);
             }
