@@ -39,7 +39,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] sourceArray = new int[]{5, 1, 7, 3, 9, 4, 6};
+        int[] sourceArray = new int[]{5, 1, 7, 3, 9, 3, 4, 6};
         int[] sortedArray = new int[sourceArray.length];
         System.arraycopy(sourceArray, 0, sortedArray, 0, sourceArray.length);
         System.out.println("before sorted:" + Arrays.toString(sourceArray));

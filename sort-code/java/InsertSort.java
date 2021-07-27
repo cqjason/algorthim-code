@@ -18,7 +18,7 @@ public class InsertSort {
     }
 
     public static void main(String[] args) {
-        int[] sourceArray = new int[]{5, 1, 7, 3, 9, 4, 6};
+        int[] sourceArray = new int[]{5, 1, 4, 7, 3, 9, 4, 6};
         System.out.println("before sorted:" + Arrays.toString(sourceArray));
         int[] sortedArray = sort(sourceArray);
         System.out.println("after sorted:" + Arrays.toString(sortedArray));
