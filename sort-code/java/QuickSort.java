@@ -5,7 +5,7 @@ public class QuickSort {
 
     public  static void sort(int[] arr, int left, int right){
         if(left < right){
-            int position = partition(arr,left,right);
+            int position = randomPartition(arr,left,right);
             sort(arr,left,position);
             sort(arr,position+1,right);
         }
@@ -26,7 +26,7 @@ public class QuickSort {
 //        arr[left] = pivot;
 //        return left;
         int i = left;
-        for( int j = left+ 1; j < right; j++){
+        for( int j = left+ 1; j <= right; j++){
             if(arr[j] < pivot){
                 SortUtils.swapIntArray(arr,++i, j);
             }
